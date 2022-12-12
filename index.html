@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Ubuntu', sans-serif;
+            }
+            .ptr {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                background-color: azure;
+            }
+            .contenedor {
+                border-radius: 10px;
+                background-color: darkslategray;
+                width: 350px;
+                padding: 20px;
+                box-shadow: 5px 5px 10px;
+            }
+
+            .contenedor h1 {
+                color: white;            
+            }
+
+            .contenedor span {
+                color: turquoise;
+            }
+
+            .contenedor p {
+                color: lightgrey;
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid lightgrey;
+                margin: 25px 0;
+                opacity: 0.2;                       
+            }
+
+            .btnPss {
+                background-color: turquoise ;
+                border-radius: 5px;
+                padding: 10px;
+                color: darkslategray;
+                border: none;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            .passwords {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .passwords > div {
+                background-color: #263f3f;
+                color: turquoise;
+                padding: 3px 8px;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="ptr">
+            <div class="contenedor">
+                <h1>Generar <span>contraseñas aleatorias</span></h1>
+                <p>No vuelvas a usar una contraseña insegura.</p>
+                <button class="btnPss" id="btnGenerar">Generar contraseñas</button>
+                <hr>
+                <div class="passwords">
+                    <div id="ct1"></div>
+                    <div id="ct2"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script>
+            const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+
+            contrasena01 = document.getElementById("ct1");
+            contrasena02 = document.getElementById("ct2");
+
+            document.getElementById("btnGenerar").addEventListener('click', function() {
+                contrasena01.textContent = creaPass()
+                contrasena02.textContent = creaPass()
+            }
+            
+            )
+            
+
+            function creaPass() {
+                let pass ="";
+                    for (let i = 1; i < 16; i++) {
+                        nro = Math.floor(Math.random() * characters.length)
+                        pass += characters[nro];
+                    }
+                return pass;  
+            }
+            
+            
+
+            
+        </script>
+    </body>
+    </html>
