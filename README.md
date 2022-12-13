@@ -8,4 +8,4 @@ Del combobox se selecciona la cantidad de caracteres que deben tener las contras
 - html
 
 ## 🌐 Ver app en vivo
-https://juambeltz.github.io/tantos_basketball/
+https://juambeltz.github.io/random_password_generator/
