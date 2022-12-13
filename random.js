@@ -10,10 +10,6 @@ document.getElementById("btnGenerar").addEventListener('click', function() {
     }
 )
 
-
-
-
-
 function creaPass() {
     let e = document.getElementById("nroCar");
     let valor = e.value;
