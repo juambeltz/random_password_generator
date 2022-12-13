@@ -58,3 +58,7 @@ hr {
     color: turquoise;
     padding: 3px 8px;
 }
+
+form {
+    padding: 10px 0;
+}

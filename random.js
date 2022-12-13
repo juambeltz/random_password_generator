@@ -3,15 +3,11 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 contrasena01 = document.getElementById("ct1");
 contrasena02 = document.getElementById("ct2");
 
+
 document.getElementById("btnGenerar").addEventListener('click', function() {
     contrasena01.textContent = creaPass()
     contrasena02.textContent = creaPass()
-}
-
-
-
-
-
+    }
 )
 
 
@@ -19,8 +15,11 @@ document.getElementById("btnGenerar").addEventListener('click', function() {
 
 
 function creaPass() {
+    let e = document.getElementById("nroCar");
+    let valor = e.value;
+
     let pass ="";
-        for (let i = 1; i < 16; i++) {
+        for (let i = 1; i < valor; i++) {
             nro = Math.floor(Math.random() * characters.length)
             pass += characters[nro];
         }
